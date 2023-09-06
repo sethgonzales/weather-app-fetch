@@ -1,5 +1,5 @@
-export default class WeatherService {  
-  static getWeather(city) {
+export default class WeatherService {  //create WeatherService class that acts as instance of API
+  static getWeather(city) { //
     return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`)
       .then(function(response) {
         if (!response.ok) {
