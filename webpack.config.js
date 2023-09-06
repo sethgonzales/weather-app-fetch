@@ -1,4 +1,5 @@
 const path = require('path');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
@@ -10,15 +11,18 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  devtool: 'eval-source-map',
-  devServer: {               
-    contentBase: './dist'    
+  devServer: {
+    contentBase: "./dist",
   },
+  devtool: 'eval-source-map',
+  
   plugins: [
     new ESLintPlugin(),
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      verbose: true
+    }),
     new HtmlWebpackPlugin({
-      title: 'Shape Tracker',
+      title: 'new_project_title_here',
       template: './src/index.html',
       inject: 'body'
     }),

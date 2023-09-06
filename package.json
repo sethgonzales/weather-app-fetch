@@ -1,5 +1,5 @@
 {
-  "name": "open-weather-api",
+  "name": "name_of_file",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "build": "webpack --mode=development",
     "start": "npm run build && webpack-dev-server --open --mode=development",
     "lint": "eslint src --ext .js",
-    "test": "jest --coverage"
+    "test": "jest --colors --coverage"
   },
   "keywords": [],
   "author": "",
